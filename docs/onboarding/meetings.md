@@ -3,6 +3,7 @@ layout: default
 title: Meetings
 parent: Onboarding
 nav_order: 4
+permalink: /onboarding/meetings
 ---
 
 ## Weekly Lab Meetings

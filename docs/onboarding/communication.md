@@ -3,6 +3,7 @@ layout: default
 title: Communication
 parent: Onboarding
 nav_order: 2
+permalink: /onboarding/communication
 ---
 
 ## Slack

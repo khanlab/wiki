@@ -3,6 +3,7 @@ layout: default
 title: Working Hours
 parent: Onboarding
 nav_order: 6
+permalink: /onboarding/hours
 ---
 
 ## Working Hours

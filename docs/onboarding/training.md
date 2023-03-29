@@ -3,6 +3,7 @@ layout: default
 title: Training
 parent: Onboarding
 nav_order: 3
+permalink: /onboarding/training
 ---
 
 ## Basic Training (HR)

@@ -3,10 +3,17 @@ layout: default
 title: Lab Access
 parent: Onboarding
 nav_order: 1
+permalink: /onboarding/lab-access
 ---
-
+## Lab Location
 Our lab is located in a secure, card-access building. Additionally, our lab is
 behind a door that requires a key to unlock.
+
+## UWO Identity
+If you do not already have a UWO identity, you will need to contact ITS 
+(519-661-3800) to get your password - they will ask for your UWO ID#. 
+You can then activate your identity 
+[here](https://identity.uwo.ca/activate-hr;jsessionid=C843C01692B7B246356C75B4F1E2C9D4?0).
 
 ## Card Access
 Your Western card should grant you access into the outer doors of Robarts. If 

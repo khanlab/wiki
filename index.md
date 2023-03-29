@@ -47,7 +47,7 @@ be on Western network to access)
 
 [Khan Computational Imaging Lab]: https://khanlab.github.io 
 [GitHub]: https://github.com
-[CBS Server]: https://forms.office.com/r/sQepNZDNqS 
+[CBS Server]: https://vsecurity.robarts.ca 
 [Digital Alliance of Canada]: https://ccdb.computecanada.ca
 [Mental Health & Wellbeing]: https://www.uwo.ca/health/psych/index.html
 [CFMM Calendar]: https://schedule.cfmm.uwo.ca
