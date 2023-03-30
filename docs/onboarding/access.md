@@ -10,7 +10,7 @@ Our lab is located in a secure, card-access building. Additionally, our lab is
 behind a door that requires a key to unlock.
 
 ## UWO Identity
-If you do not already have a UWO identity, you will need to contact ITS 
+If you do not already have a UWO identity, you will need to contact [WTS](https://wts.uwo.ca/index.html)
 (519-661-3800) to get your password - they will ask for your UWO ID#. 
 You can then activate your identity 
 [here](https://identity.uwo.ca/activate-hr;jsessionid=C843C01692B7B246356C75B4F1E2C9D4?0).
@@ -18,7 +18,7 @@ You can then activate your identity
 ## Card Access
 Your Western card should grant you access into the outer doors of Robarts. If 
 you are unable to enter one of the secured doors using your card, you will need
-to contact Rebecca Nash (cc: Ali) with the following information:
+to contact Rebecca Nash (cc: Ali Khan) with the following information:
 
 * Name of person needing access
 * Their employment relationship (Staff, Grad Student, Associated Persons)
@@ -29,7 +29,7 @@ to contact Rebecca Nash (cc: Ali) with the following information:
 
 {: .note}
 If you forget your card at home or left it at your desk, you can also enter 
-through the front doors (on the 2nd floor where security is located)
+through the front doors (on the 2nd floor where security is located).
 
 ## Keys
 There are two doors, both using the same key, that can be used to enter the lab: 
@@ -39,5 +39,5 @@ There are two doors, both using the same key, that can be used to enter the lab:
 To request a key to the lab (RRI 1240), follow the steps 
 [here](https://www.uwo.ca/fm/client_services/keys.html).
 
-During the day, this door is likely to be unlocked. In the evening or if you are
-the first to arrive, you may find this door locked.
+During the day, this door will be be unlocked. In the evening or if you are
+the first to arrive, you may find this door locked.  If you are locked out of the Lab space and nobody is around, on-site Robarts security can let you in (if security is not at the Front Desk, they may be walking their rounds in the building and will return).
