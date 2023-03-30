@@ -22,12 +22,12 @@ etc.
 
 Below are a few of the mailing lists you may be interested in:
 
-All@robarts.ca – Everyone with building access
-chat@robarts.ca – General chat/requests around the building.
-Seminars@robarts.ca – Seminar information
-imaging@robarts.ca – imaging group at Robarts
-researchstaff@robarts.ca – Staff at Robarts
-trainee@robarts.ca – Trainees at Robarts
+- all@robarts.ca – Everyone with building access
+- chat@robarts.ca – General chat/requests around the building.
+- seminars@robarts.ca – Seminar information
+- imaging@robarts.ca – Imaging group at Robarts
+- researchstaff@robarts.ca – Staff at Robarts
+- trainee@robarts.ca – Trainees at Robarts
 
 ### Adding yourself to mailing lists:
 
@@ -40,7 +40,6 @@ Outlook on the web you will find it under the people section.  Images are attach
 In Outlook, click on the group.  There is a button on the top ribbon called “Group Settings”.  Click on that then select leave.
 
 On the web, right click on the group and select leave.
-
 
 If you want to stay part of the group but not get the email notifications in your mailbox, in the group settings then you can turn off follow in inbox.
 
