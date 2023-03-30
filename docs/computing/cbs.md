@@ -15,7 +15,7 @@ visualize and interact with your data (including data on the Digital Alliance
 of Canada servers).
 
 {: .important}
-Form for new user sign-up (**do not select power user**): 
+Form for new user sign-up (**select Basic user unless you have discussed this with your supervisor(s)**): 
 [https://forms.office.com/r/sQepNZDNqS](https://forms.office.com/r/sQepNZDNqS)
 
 All Khanlab users will automatically be granted access to a CBS basic (standard)
