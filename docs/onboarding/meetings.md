@@ -13,7 +13,7 @@ a students can sign-up for slots to present - see the
 
 {: .note}
 Wednesdays [1-2pm; hybrid format] - Faraday Cage / 
-Zoom (https://westernuniversity.zoom.us/j/931120005)
+Zoom link located on Slack
 
 ## Small group meetings
 
