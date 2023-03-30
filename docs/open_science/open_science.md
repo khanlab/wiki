@@ -12,7 +12,7 @@ permalink: /open-science
 Here at the Khan Lab, we encourage and support open-science practices.
 
 ## Data
-We strike to release the raw, de-identified data for any study where we are 
+We strive to release the raw, de-identified data for any study where we are 
 collecting data, or any derived data that we have generated. The [BIDS] (Brain
 Imaging Data Standard) is an open standard for describing neuroimaging data. We
 have tools that help to automatically convert acquired data in to this standard
