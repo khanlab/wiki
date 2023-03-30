@@ -29,7 +29,7 @@ for more information.
 ### Getting an account
 Create an account at [CCDB].
 
-Make sure you include your Sponsor, Ali Khan (CCI: xkc-513-04). Once the 
+Make sure you include your Sponsor, Ali Khan (CCRI: xkc-513-04). Once the 
 sponsorship request has been accepted, you will be granted privleges to actually
 use SHARCNET.
 
@@ -42,14 +42,14 @@ If you are using `sshfs`, you should always have passwordless ssh set-up,
 otherwise you may encounter issues with your IP becoming blacklisted due to too
 many failed reconnection attempts.
 
-Instructions to set this up can be found below (commands should be entered 
+If you are using the [CBS server](/computing/cbs), there is an automated process to set this up by running `setup_sshfs_alias`. If not, instructions to set this up can be found below (commands should be entered 
 into a terminal):
 1. Generate a ssh keyfile:
     ```bash
     ssh-keygen -t rsa
     ```
 
-1. Copy this to the remote server
+2. Copy this to the remote server
     ```bash
     ssh-copy-id -i ~/.ssh/id_rsa.pub <user>@graham.computecanada.ca
     ```
