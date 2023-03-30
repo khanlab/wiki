@@ -35,5 +35,5 @@ not provide a meal (the admin staff will check against the conference program!)
 post-doc, etc.) and your relationship with Me (e.g. Supervisor: Ali Khan)
 * For re-imbursing food for lab meetings, mini-hacks, tutorials etc, use **Meeting** as the Business Purpose, and use **Meal: Hospitality Receipt** as the Expense Type. You can include expenses for multiple days/events as different lines in the same expense report. Be sure to include the list of attendees for each expense where indicated.
 ## Useful Links
-* [Guide](https://www.uwo.ca/finance/restricted/training_reference_content/corporate_accounting/documents/documents/Travel%20and%20Expense%20Slides.pdf))
+* [Guide](https://www.uwo.ca/finance/restricted/training_reference_content/corporate_accounting/documents/documents/Travel%20and%20Expense%20Slides.pdf)
 * [Expense Reimbursements](https://www.uwo.ca/finance/accounting/travel_expense_reimbursement.html)
