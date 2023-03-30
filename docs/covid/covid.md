@@ -13,8 +13,7 @@ permalink: /covid-19
 Graduate students, staff, undergrad and post-docs are allowed to return to work. 
 
 ## General Procedures
-* You are **strongly encouraged** to wear a mask when you are in common areas. 
-It is ok to take your mask off when eating/drinking.
+* You are **strongly encouraged** to wear a mask when you are in common areas
 * As per Western policy, students, employees, and visitors do not need to be
 vaccinated to come to campus. However, it is still strongly encouraged to
 remain up-to-date on vaccinations.
@@ -38,4 +37,4 @@ For details for scheduling and running scans at the CFMM, please see the
 [SOPs] and the document outlining [minimizing risk].
 
 [SOPs]: https://cfmm.uwo.ca/resources/sops.html
-[minimizing risk]: https://cfmm.uwo.ca/resources/sof_pdf/MinimizingRiskCOVID19.pdf
+[minimizing risk]:  https://cfmm.uwo.ca/resources/uploads/sops_pdf/MinimizingRiskCOVID19.pdf
