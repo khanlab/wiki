@@ -34,9 +34,9 @@ permalink: /onboarding/website
 ```
 
 ## Config
-The config (`_config.yml`) has important variables that set important
-properties for the page. Importantly, the `callouts` should be kept be 
-in mind.
+The config (`_config.yml`) has variables that set properties for the page. 
+Importantly, the `callouts` should be kept be in mind as it sets the 
+title and colour for each type of call out.
 
 ## Callouts
 A callout can be set on the page using syntax that is similar to `{: .note}`. It
