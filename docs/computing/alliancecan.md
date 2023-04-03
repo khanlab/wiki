@@ -57,14 +57,29 @@ into a terminal):
 
 ### Mounting Graham data locally with `sshfs`
 #### Mac/Linux
-Detailed instructions for mounting can be found 
-[here](https://www.sharcnet.ca/help/index.php/SSHFS), however, make sure to use
-the options highlighted below:
+After setting up the passwordless SSH, follow the next steps:
+1. Create a new bash file (location doesn't matter) with the following content:
+    ```bash
+    #!/bin/bash
+    mount_dir="<MOUNT_DIR>"
+    if (! mountpoint -q $mount_dir); then
+        sshfs <user>@graham.sharcnet.ca:/home/<user>/ $mount_dir -o   ServerAliveInterval=15,ServerAliveCountMax=3,Compression=no,follow_symlinks
+    else
+        umount $mount_dir
+    fi
+    ```
+    Replace `<MOUNT_DIR>` with the directory to which you want to mount your Graham home folder. Also, substitute `<user>` with your corresponding user. \
+    The name of the file will be the command that you will use to mount and unmount your Graham folder, so make sure to use an easy to remember; for example, `graham_sshfs.sh`.
+2. Rename the file to remove the `.sh` extension.
+3. Create a new folder in your local home folder: `mkdir -p ~/bin`. 
+4. Copy the previous file to that location (`cp <file_name> ~/bin`) and add execution permissions to it (`chmod 755 ~/bin/<file_name>`).
+5. Add the following line at the end of your bashrc file:
+    ```bash
+    export PATH=$PATH:~/bin
+    ```
+6. Reload your bashrc file: `source ~/.bashrc`.
 
-```bash
-mkdir $HOME/graham;
-sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,follow_symlinks $USER@gra-dtn1.computecanada.ca:/home/$USER ~/graham;
-```
+Now, you should be able to mount or unmount your Graham home folder by running `<file_name>` in the terminal.
 
 #### Windows
 For Windows, you can follow the instructions put together 
@@ -156,6 +171,59 @@ ssh -Y <user>@graham.computecanada.ca
 By default, this brings you to the login node which **is not** a compute node. 
 This should only be used for viewing images.
 
+### Run Jupyter Notebooks in your local VS Code
+To be able to run Jupyter Notebooks in Visual Studio Code from your local machine, use the following instructions:
+1. Follow the instructions above to set the passwordless SSH.
+2. Open your local VS Code and install the `Remote - SSH` extension.
+3. Hit `Ctrl+Shift+p` and type `Remote-SSH: Open SSH configuration file...`. Select the file in your home directory and set it to:
+    ```
+    Host graham.sharcnet.ca
+        HostName graham.sharcnet.ca
+        User <username>
+        IdentityFile ~/.ssh/<file>
+    ```
+    Replace `<username>` with your corresponding Graham username and `<file>` with the file generated when setting the passwordless SSH connection.
+4. Before connecting to the server, go to the settings of the Remote-SSH extension and set the Connect Timeout value to a higher value than the default, for example, 10000 (since Graham usually responds slowly).
+5. Use `Ctrl+Shift+p` again, type `Remote-SSH: Connect to Host...` and use the previous config file. This will enable the SSH connection between VS Code and Graham. You should now be able to see your Graham folders in VS Code.
+6. In a terminal, ssh to Graham. 
+    1. Create a virtual environment using `kpy create <name>` (from [kslurm](https://github.com/pvandyken/kslurm) tool). 
+    2. Load the venv and install `jupyterlab` plus any other packages you need.
+    3. Save the env (`kpy save <name of your venv>`) and deactivate the venv (`deactivate`). 
+    4. Run `kjupyter` with any required specifications and using the created venv (refer to the instructions [here](https://github.com/pvandyken/kslurm)).
+7. Return to the VS Code window from step 5 and open the Jupyter file that you want to run.
+8. Use `Ctrl+Shift+p` and type `Jupyter: Specify Jupyter Server for Connections`. Paste the URL given by kjupyter for the server connection.
+
+>
+- If kjupyter command doesn't work after step 6, try installing `jupyterlab` in your local Python in Graham (without any venv activated, run `pip install jupyterlab`).
+- Running Jupyter Notebooks through SSH Tunneling is usually faster. When running `kjupyter`, this option is provided.  
+{: .note}
+
+### Visualization of Compute Nodes
+In Graham, it is possible to run a VNC server in a compute node, which allows the visualization of results, such as plots, or using GUI applications as MATLAB. Follow these instructions to get a VNC connection to a compute node in Graham (based on the information found [here](https://docs.alliancecan.ca/wiki/VNC#VDI_Nodes)):
+1. If using Linux or MacOs, download TigerVNC from the [official download page](https://sourceforge.net/projects/tigervnc/files/stable/). If using Windows, download and install VNC Viewer from the [official website](https://sourceforge.net/projects/tigervnc/files/stable/). Refer to the instructions [here](https://docs.alliancecan.ca/wiki/VNC#Setup) for more details.
+2. Use ssh to connect to Graham login node. 
+    1. Install `neuroglia-helpers` if not already done, refer to the [repository](https://github.com/khanlab/neuroglia-helpers) for more instructions.
+    2. Run `regularInteractive` indicating the needed resources. Refer to the [repository](https://github.com/khanlab/neuroglia-helpers) for more instructions.
+    3. Once the interactive session is opened, take note of the node to which you are connected and then run:
+        ```
+        export XDG_RUNTIME_DIR=${SLURM_TMPDIR}
+        ```
+    4. Run `vncserver`.
+    5. Finally, run the followind command to know the connection port of the server:
+        ```bash
+        grep /home/<username>/.vnc/<log_file>.log
+        ```
+    This path will be shown in the terminal after executing `vncserver` in previous step. 
+
+    {: .important}
+    If you are configuring the VNC connection for the first time, make sure that you **DO NOT** leave the password empty. Save this password somewhere safe. 
+    
+3. In a new terminal, run the following command to set the ssh tunnel between your computer and the server configured in the previous step.
+    ```bash
+    ssh <username>@graham.sharcnet.ca -L <port on your computer>:<allocated node>:<port from the node> 
+    ```
+    Fill in the corresponding information. For the port on your computer, you can use the 5902. In `<allocated node>`, put the node that you allocated after step 3, starting with `gra` followed by a few numbers. Fill `<port from the node>` input the port from step 2.e.
+4. Finally, open your VNC viewer application and connect to the local port that you decided in the previous step (for example: `localhost:5902`) and click on 'Connect'. Use the password that you configured in the step 2.d.
 
 [CCDB]: https://ccdb.computecanada.ca/security/login
 [Globus]: https://globus.computecanada.ca
