@@ -57,14 +57,30 @@ into a terminal):
 
 ### Mounting Graham data locally with `sshfs`
 #### Mac/Linux
-Detailed instructions for mounting can be found 
-[here](https://www.sharcnet.ca/help/index.php/SSHFS), however, make sure to use
-the options highlighted below:
+After setting up the passwordless SSH, follow the next steps:
+1. Create a new folder in the location where you wish to mount your Graham home folder. For example: `mkdir -p ~/graham`
+2. Create a new folder in your local home folder: `mkdir -p ~/bin`.
+3. Create a new bash file in the previously created folder with the following content:
+    ```bash
+    #!/bin/bash
+    mount_dir="<MOUNT_DIR>"
+    if (! mountpoint -q $mount_dir); then
+        sshfs <user>@graham.computecanada.ca:/home/<user>/ $mount_dir -o ServerAliveInterval=15,ServerAliveCountMax=3,Compression=no,follow_symlinks
+    else
+        umount $mount_dir
+    fi
+    ```
+    Replace `<MOUNT_DIR>` with the directory created in the first step. Also, substitute `<user>` with your corresponding user. \
+    The name of the file will be the command that you will use to mount and unmount your Graham folder, so make sure to use an easy to remember; for example, `graham_sshfs.sh`.
+4. Rename the file to remove the `.sh` extension.
+5. Add execution permissions to it. You can use `chmod 755 ~/bin/<file_name>`, which gives read, write and execution permissions to the owner, while only giving read and execution permissions to users in the same group and other users. An alternative is using `chmod +x ~/bin/<file_name>`, which gives execution permissions to all users.
+6. Export to path permanently. This can be done by adding the following line at the end of your bashrc file:
+    ```bash
+    export PATH=$PATH:~/bin
+    ```
+7. Reload your bashrc file: `source ~/.bashrc`.
 
-```bash
-mkdir $HOME/graham;
-sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,follow_symlinks $USER@gra-dtn1.computecanada.ca:/home/$USER ~/graham;
-```
+Now, you should be able to mount or unmount your Graham home folder by running `<file_name>` in the terminal.
 
 #### Windows
 For Windows, you can follow the instructions put together 
@@ -146,6 +162,7 @@ echo “export SACCT_FORMAT=JobID%-20,Start%-10,Elapsed%-10,State,AllocCPUS%8,Ma
 ```
 
 ### Visualization
+#### Login node
 You can also use X forwarding to visualize your data via SSH. To do so, run the
 following command:
 
@@ -155,6 +172,34 @@ ssh -Y <user>@graham.computecanada.ca
 {: .important}
 By default, this brings you to the login node which **is not** a compute node. 
 This should only be used for viewing images.
+#### Compute nodes
+In Graham, it is possible to run a VNC server in a compute node, which allows the visualization of results, such as plots, or using GUI applications as MATLAB. Follow these instructions to get a VNC connection to a compute node in Graham (based on the information found [here](https://docs.alliancecan.ca/wiki/VNC#VDI_Nodes)):
+1. Download TigerVNC from the [official download page](https://sourceforge.net/projects/tigervnc/files/stable/) and install it. Refer to the instructions [here](https://docs.alliancecan.ca/wiki/VNC#Setup) for more details.
+2. Use ssh to connect to Graham login node. 
+    >
+    It is recommended to install [`neuroglia-helpers`](https://github.com/khanlab/neuroglia-helpers) or [`kslurm`](https://github.com/pvandyken/kslurm) if not already done. This will facilitate the request of resources in Graham.
+    {: .note}
+    1. Request an interactive session with the needed resources. This can be done using [`neuroglia-helpers`](https://github.com/khanlab/neuroglia-helpers) or [`kslurm`](https://github.com/pvandyken/kslurm).
+    2. Once the interactive session is opened, take note of the node to which you are connected and then run:
+        ```
+        export XDG_RUNTIME_DIR=${SLURM_TMPDIR}
+        ```
+    3. Run `vncserver`.
+    4. Finally, run the following command to know the connection port of the server:
+        ```bash
+        grep /home/<username>/.vnc/<log_file>.log
+        ```
+    This path will be shown in the terminal after executing `vncserver` in previous step. 
+
+    {: .important}
+    If you are configuring the VNC connection for the first time, make sure that you **DO NOT** leave the password empty. Save this password somewhere safe. 
+    
+3. In a new terminal, run the following command to set the ssh tunnel between your computer and the server configured in the previous step.
+    ```bash
+    ssh <username>@graham.computecanada.ca -L <port on your computer>:<allocated node>:<port from the node> 
+    ```
+    Fill in the corresponding information. For the port on your computer, you can use the 5902. In `<allocated node>`, put the node that you allocated after step 3, starting with `gra` followed by a few numbers. Fill `<port from the node>` input the port from step 2.e.
+4. Finally, open your VNC viewer application and connect to the local port that you decided in the previous step (for example: `localhost:5902`) and click on 'Connect'. Use the password that you configured in the step 2.d.
 
 
 [CCDB]: https://ccdb.computecanada.ca/security/login
