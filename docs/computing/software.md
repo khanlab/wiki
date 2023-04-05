@@ -95,7 +95,7 @@ To be able to run Jupyter Notebooks in Visual Studio Code from your local machin
 1. Open your local VS Code and install the `Remote - SSH` extension.
 2. Hit `Ctrl+Shift+p` and type `Remote-SSH: Open SSH configuration file...`. Select the file in your home directory and set it to:
     ```
-    Host graham.sharcnet.ca
+    Host graham.computecanada.ca
         HostName graham.computecanada.ca
         User <username>
         IdentityFile ~/.ssh/<file>

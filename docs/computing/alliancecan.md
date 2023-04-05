@@ -185,7 +185,7 @@ In Graham, it is possible to run a VNC server in a compute node, which allows th
         export XDG_RUNTIME_DIR=${SLURM_TMPDIR}
         ```
     3. Run `vncserver`.
-    4. Finally, run the followind command to know the connection port of the server:
+    4. Finally, run the following command to know the connection port of the server:
         ```bash
         grep /home/<username>/.vnc/<log_file>.log
         ```
@@ -196,7 +196,7 @@ In Graham, it is possible to run a VNC server in a compute node, which allows th
     
 3. In a new terminal, run the following command to set the ssh tunnel between your computer and the server configured in the previous step.
     ```bash
-    ssh <username>@graham.sharcnet.ca -L <port on your computer>:<allocated node>:<port from the node> 
+    ssh <username>@graham.computecanada.ca -L <port on your computer>:<allocated node>:<port from the node> 
     ```
     Fill in the corresponding information. For the port on your computer, you can use the 5902. In `<allocated node>`, put the node that you allocated after step 3, starting with `gra` followed by a few numbers. Fill `<port from the node>` input the port from step 2.e.
 4. Finally, open your VNC viewer application and connect to the local port that you decided in the previous step (for example: `localhost:5902`) and click on 'Connect'. Use the password that you configured in the step 2.d.
