@@ -18,7 +18,7 @@ You can then activate your identity
 ## Card Access
 Your Western card should grant you access into the outer doors of Robarts. If 
 you are unable to enter one of the secured doors using your card, you will need
-to contact Rebecca Nash (cc: Ali Khan) with the following information:
+to contact Rebecca Nash (rnash@robarts.ca) (cc: Ali Khan) with the following information:
 
 * Name of person needing access
 * Their employment relationship (Staff, Grad Student, Associated Persons)
