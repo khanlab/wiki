@@ -15,6 +15,12 @@ If you do not already have a UWO identity, you will need to contact [WTS](https:
 You can then activate your identity 
 [here](https://identity.uwo.ca/activate-hr;jsessionid=C843C01692B7B246356C75B4F1E2C9D4?0).
 
+## Robarts Login
+Our lab makes use of a virtual desktop infrastructure (VDI) server at Robarts, so that all users can access the same graphical user interface on a Ubuntu Linux system. 
+To sign up for a user, fill out the following [form](https://forms.office.com/r/sQepNZDNqS). Please select basic user unless you have discussed this with your supervisor(s).
+
+All Khanlab users will automatically be granted access to a CBS basic (standard) account. Please contact Dr. Khan if you need a CBS heavy account (more computational resources).
+
 ## Card Access
 Your Western card should grant you access into the outer doors of Robarts. If 
 you are unable to enter one of the secured doors using your card, you will need
