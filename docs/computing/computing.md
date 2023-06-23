@@ -11,8 +11,8 @@ permalink: /computing
 ## Computing resources
 Our lab makes use of two computational resources. Check out their respective
 pages for more information:
-  1. [Virtual Desktop (CBS Server)](/computing/cbs)
-  1. [Digital Alliance of Canada](/computing/alliance-can)
+  1. [Virtual Desktop (CBS Server)](/wiki/computing/cbs)
+  1. [Digital Alliance of Canada](/wiki/computing/alliance-can)
   
 ## Helpful Links
 Below are some links to help you contact the appropriate people / forum for
