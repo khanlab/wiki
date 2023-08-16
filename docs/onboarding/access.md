@@ -13,7 +13,7 @@ behind a door that requires a key to unlock.
 If you do not already have a UWO identity, you will need to contact [WTS](https://wts.uwo.ca/index.html)
 (519-661-3800) to get your password - they will ask for your UWO ID#. 
 You can then activate your identity 
-[here](https://identity.uwo.ca/activate-hr;jsessionid=C843C01692B7B246356C75B4F1E2C9D4?0).
+[here](https://identity.uwo.ca/activate-hr).
 
 ## Robarts Login
 Our lab makes use of a virtual desktop infrastructure (VDI) server at Robarts, so that all users can access the same graphical user interface on a Ubuntu Linux system. 
