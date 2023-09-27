@@ -17,7 +17,7 @@ You can then activate your identity
 
 ## Robarts Login
 Our lab makes use of a virtual desktop infrastructure (VDI) server at Robarts, so that all users can access the same graphical user interface on a Ubuntu Linux system. 
-To sign up for a user, fill out the following [form](https://forms.office.com/r/sQepNZDNqS). Please select basic user unless you have discussed this with your supervisor(s).
+To sign up for a user, fill out the following [form](https://forms.office.com/r/mdmWQ6qpep). Please select basic user unless you have discussed this with your supervisor(s).
 
 All Khanlab users will automatically be granted access to a CBS basic (standard) account. Please contact Dr. Khan if you need a CBS heavy account (more computational resources).
 
