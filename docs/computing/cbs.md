@@ -16,11 +16,15 @@ of Canada servers).
 
 {: .important}
 Form for new user sign-up (**select Basic user unless you have discussed this with your supervisor(s)**): 
-[https://forms.office.com/r/sQepNZDNqS](https://forms.office.com/r/sQepNZDNqS)
+[https://forms.office.com/r/mdmWQ6qpep](https://forms.office.com/r/mdmWQ6qpep)
 
 All Khanlab users will automatically be granted access to a CBS basic (standard)
 account. Please contact Dr. Khan if you need a CBS heavy account (more 
 computational resources).
+
+{: .note}
+If you need to make a change to an existing account, use the following link:
+[https://forms.office.com/r/sQepNZDNqS](https://forms.office.com/r/sQepNZDNqS)
 
 ## Additional resources
 * [CBS Wiki](https://osf.io/k89fh/wiki/Computational%20Core%20Server/)
