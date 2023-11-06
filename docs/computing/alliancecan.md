@@ -60,7 +60,7 @@ into a terminal):
 After setting up the passwordless SSH, follow the next steps:
 1. Create a new folder in the location where you wish to mount your Graham home folder. For example: `mkdir -p ~/graham`
 2. Create a new folder in your local home folder: `mkdir -p ~/bin`.
-3. Create a new bash file in the previously created folder with the following content:
+3. Create a new file in the previously created folder: `code ~/bin/graham`. When VScode opens, put the following content in the file and save:
     ```bash
     #!/bin/bash
     mount_dir="<MOUNT_DIR>"
@@ -70,17 +70,24 @@ After setting up the passwordless SSH, follow the next steps:
         umount $mount_dir
     fi
     ```
-    Replace `<MOUNT_DIR>` with the directory created in the first step. Also, substitute `<user>` with your corresponding user. \
-    The name of the file will be the command that you will use to mount and unmount your Graham folder, so make sure to use an easy to remember; for example, `graham_sshfs.sh`.
-4. Rename the file to remove the `.sh` extension.
-5. Add execution permissions to it. You can use `chmod 755 ~/bin/<file_name>`, which gives read, write and execution permissions to the owner, while only giving read and execution permissions to users in the same group and other users. An alternative is using `chmod +x ~/bin/<file_name>`, which gives execution permissions to all users.
-6. Export to path permanently. This can be done by adding the following line at the end of your bashrc file:
+    Replace `<MOUNT_DIR>` with the directory created in the first step. Also, substitute `<user>` with your corresponding user.
+4. Add execution permissions to it. You can use `chmod +x ~/bin/graham`. Here, the `+x` part of the command adds execution permission to the file.
+5. Export to path permanently. Open your bashrc file using `code ~/.bashrc`. Add the following line to the end of the file:
     ```bash
-    export PATH=$PATH:~/bin
+    export PATH="~/bin:$PATH"
     ```
-7. Reload your bashrc file: `source ~/.bashrc`.
+6. Reload your bashrc file: `source ~/.bashrc`.
 
-Now, you should be able to mount or unmount your Graham home folder by running `<file_name>` in the terminal.
+Now, you should be able to mount or unmount your Graham home folder by running `graham` in the terminal.
+
+{: .note}
+    If something like the following after typing `code <somefile`:
+
+    ```
+    command not found: code
+    ```
+
+    You may need to install VScode to your system first. See [here](https://code.visualstudio.com/) for installation instructions
 
 #### Windows
 For Windows, you can follow the instructions put together 
