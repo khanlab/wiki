@@ -81,13 +81,14 @@ After setting up the passwordless SSH, follow the next steps:
 Now, you should be able to mount or unmount your Graham home folder by running `graham` in the terminal.
 
 {: .note}
-    If something like the following after typing `code <somefile`:
+If something like the following prints after typing `code <somefile>`:
 
-    ```
-    command not found: code
-    ```
+```
+command not found: code
+```
 
-    You may need to install VScode to your system first. See [here](https://code.visualstudio.com/) for installation instructions
+You may need to install VScode to your system first. See [here](https://code.visualstudio.com/) for installation instructions
+{::}
 
 #### Windows
 For Windows, you can follow the instructions put together 
