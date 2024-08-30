@@ -12,7 +12,7 @@ a students can sign-up for slots to present - see the
 [sign-up sheet](https://docs.google.com/document/d/1mMbvAmGg6wLNA0_kVYFf8oz56_TGacEjkxovMrsUyQc/edit?usp=sharing) for more details.
 
 {: .note}
-Wednesdays [1-2pm; hybrid format] - Faraday Cage / 
+Fridays [10:30-11:30am; hybrid format] - Faraday Cage / 
 Zoom link located on Slack
 
 ## Small group meetings
