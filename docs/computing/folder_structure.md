@@ -21,13 +21,14 @@ All lab-related data and projects are organized under:
 ```
 
 ### **Top-Level Directories**
+```
 | Directory               | Purpose                                                                                  |
 |-------------------------|------------------------------------------------------------------------------------------|
 | `/datasets`             | Raw and processed datasets, organized by source (internal, external, aggregated).        |
 | `/trainees`             | Individual folders for lab members (current and past).                                   |
 | `/code`                 | Central repository for lab-wide code, scripts, and pipelines.                            |
 | `/docs`                 | Documentation files (e.g., dataset metadata, user guides, README files).                 |
-
+```
 ---
 
 ## **Datasets Directory**
