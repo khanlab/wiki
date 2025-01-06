@@ -30,6 +30,7 @@ Below are some useful links for getting up to speed on some of the tools we use:
 * [Python](https://swcarpentry.github.io/python-novice-inflammation)
 * [Snakemake](https://carpentries-incubator.github.io/workflows-snakemake/01-introduction/index.html)
 * [Snakebids](https://snakebids.readthedocs.io/en/stable/)
+* [BIDS](https://bids.neuroimaging.io/)
 
 ## Educational Resources
 As a lab, a lot of our research is focused on the use of magnetic resonance 
