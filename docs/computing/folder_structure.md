@@ -17,7 +17,7 @@ This structure aims to improve collaboration, data accessibility, and lab produc
 ## **Root Directory**
 All lab-related data and projects are organized under:
 ```
-/projects/<labnumber>/khanlab
+/projects/ctb-akhanf-ab/khanlab
 ```
 
 ### **Top-Level Directories**
@@ -43,7 +43,6 @@ All datasets are stored in the `/datasets` directory, with raw and processed dat
             /bids              # BIDS (raw or minimally-preproc)
             /derivatives       # Processed data from pipelines (e.g., fMRIPrep, QSIprep)
             /code              # Dataset-specific code
-            /logs              # Logs from processing or analysis steps
     /external        # External datasets (e.g., HCP, UK Biobank)
     /aggregated      # Combined datasets or multi-dataset studies
 ```
