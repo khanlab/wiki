@@ -6,28 +6,44 @@ nav_order: 1
 permalink: /computing/folder_structure
 ---
 
+# **NEW** Khan Lab storage migration 
+
+Our digital alliance storage allocation on graham/nibi is migrating from ctb-akhanf to rrg-akhanf, to be completed by the end of August. 
+
+With this change, we need to also enforce a major policy changes in how `project` space is used, so we can more easily comply with stricter storage and number of file quotas:
+
+1. Project space must only be used for archived files related to curated datasets, completed analyses/processing, and archived checkpoints of in-progres analyses/processing. 
+
+2. For any work in progress you must make use of your scratch folder. 
+
+3. All data on the project drive must be kept in the centralized `khanlab` folder (see below), which will have subfolders for datasets and trainees. These must all be group-readable so we can monitor storage usage. 
+
+4. Your personal project folder (e.g. in `~/projects/rrg-akhanf/$USER`) **must not** be used to store data, and should also be group-readable so we can monitor storage usage. 
+
+
+
+
 
 # **Khan Lab Folder Structure**
 
-This document outlines the **proposed** organized folder structure for our neuroimaging lab under `/projects/<labnumber>/khanlab`. This structure is designed to centralize data, streamline collaboration, and ensure consistency across all projects.
-This structure aims to improve collaboration, data accessibility, and lab productivity. For questions or feedback, contact the lab manager.
+This document outlines the **proposed** organized folder structure for our neuroimaging lab under `/projects/rrg-akhanf/khanlab`. This structure is designed to centralize data, streamline collaboration, and ensure consistency across all projects.
+This structure aims to improve collaboration, data accessibility, and lab productivity.
 
 ---
 
 ## **Root Directory**
 All lab-related data and projects are organized under:
 ```
-/projects/ctb-akhanf-ab/khanlab
+/projects/rrg-akhanf/khanlab
 ```
 
 ### **Top-Level Directories**
 ```
 | Directory               | Purpose                                                                                  |
 |-------------------------|------------------------------------------------------------------------------------------|
-| `/datasets`             | Raw and processed datasets, organized by source (internal, external, aggregated).        |
-| `/trainees`             | Individual folders for lab members (current and past).                                   |
-| `/code`                 | Central repository for lab-wide code, scripts, and pipelines.                            |
-| `/docs`                 | Documentation files (e.g., dataset metadata, user guides, README files).                 |
+| `/datasets`             | Raw and derived datasets, organized by source (internal, external).        |
+| `/trainees`             | Individual folders for archived data from lab members (current and past).                                   |
+| `/code`                 | Central repository for lab-wide code, scripts, containers, and pipelines.                            |
 ```
 ---
 
@@ -44,7 +60,6 @@ All datasets are stored in the `/datasets` directory, with raw and processed dat
             /derivatives       # Processed data from pipelines (e.g., fMRIPrep, QSIprep)
             /code              # Dataset-specific code
     /external        # External datasets (e.g., HCP, UK Biobank)
-    /aggregated      # Combined datasets or multi-dataset studies
 ```
 
 ---
@@ -80,18 +95,6 @@ Centralized location for shared scripts, code, containers required by the group.
 ```
 
 
----
-
-## **Docs Directory**
-Documentation related to datasets, projects, or lab processes.
-
-```
-/docs
-    dataset_guide.md
-    pipeline_instructions.md
-    lab_policies.md
-```
-
 
 ---
 
@@ -109,11 +112,12 @@ When adding new data or projects:
 
 3. **For Code**:  
    - Use github repositories under the khanlab org
-   - Clone into relevant `code` subdirectories
 
 ---
 
 ## **Enforcing Structure**
+
+**This section is under construction** 
 1. Use automated scripts to ensure directory consistency.
 2. Periodically audit the structure to maintain organization.
 3. Follow permissions guidelines to prevent unauthorized access.
