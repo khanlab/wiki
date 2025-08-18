@@ -18,7 +18,7 @@ With this change, we need to also enforce a major policy changes in how `project
 
 3. All data on the project drive must be kept in the centralized `khanlab` folder (see below), which will have subfolders for datasets and trainees. These must all be group-readable so we can monitor storage usage. 
 
-4. Your personal project folder (e.g. in `~/projects/rrg-akhanf/$USER`) **must not** be used to store data, and should also be group-readable so we can monitor storage usage. 
+4. Your personal project folder (e.g. in `~/project/rrg-akhanf/$USER`) **must not** be used to store data, and should also be group-readable so we can monitor storage usage. 
 
 
 
@@ -26,7 +26,7 @@ With this change, we need to also enforce a major policy changes in how `project
 
 # **Khan Lab Folder Structure**
 
-This document outlines the **proposed** organized folder structure for our neuroimaging lab under `/projects/rrg-akhanf/khanlab`. This structure is designed to centralize data, streamline collaboration, and ensure consistency across all projects.
+This document outlines the **proposed** organized folder structure for our neuroimaging lab under `/project/rrg-akhanf/khanlab`. This structure is designed to centralize data, streamline collaboration, and ensure consistency across all projects.
 This structure aims to improve collaboration, data accessibility, and lab productivity.
 
 ---
@@ -34,7 +34,7 @@ This structure aims to improve collaboration, data accessibility, and lab produc
 ## **Root Directory**
 All lab-related data and projects are organized under:
 ```
-/projects/rrg-akhanf/khanlab
+/project/rrg-akhanf/khanlab
 ```
 
 ### **Top-Level Directories**
