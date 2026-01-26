@@ -27,6 +27,8 @@ If you need to make a change to an existing account, use the following link:
 [https://forms.office.com/r/sQepNZDNqS](https://forms.office.com/r/sQepNZDNqS)
 
 ## Additional resources
+* (CBS server documentation)[https://hackmd.io/@CompCore/cbs_servers]
 * [CBS Wiki](https://osf.io/k89fh/wiki/Computational%20Core%20Server/)
 * [CBS Discourse Forum](https://cbs-discourse.uwo.ca) - Ask technical questions 
 or share a tool / tutorial
+* #cbs-server and #cbs-slurm channels on the SuperLab slack
